@@ -4,8 +4,8 @@ import { WeatherService } from '../weather.service';
 
 @Component({
   selector: 'app-weather-report',
-  templateUrl: './Page2.component.html',
-  styleUrls: ['./Page2.component.css']
+  templateUrl: './page2.component.html',
+  styleUrls: ['./page2.component.css']
 })
 export class Page2Component implements OnInit {
   weatherData: any[] = [];

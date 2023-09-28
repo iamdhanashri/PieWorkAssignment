@@ -1,0 +1,15 @@
+<h2>Weather Report - Page 2</h2>
+<table>
+  <thead>
+    <tr>
+      <th>City</th>
+      <th>Temperature (°C)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let data of weatherData">
+      <td>{{ data.city }}</td>
+      <td>{{ data.temperature }}</td>
+    </tr>
+  </tbody>
+</table>

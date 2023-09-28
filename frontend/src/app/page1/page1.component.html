@@ -1,0 +1,43 @@
+
+<div class="page">
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Location</th>
+        <th>Temperature</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let entry of entries">
+        <td>{{ entry.name }}</td>
+        <td>{{ entry.location }}</td>
+        <td>{{ entry.temperature }}</td>
+        <td>
+          <button (click)="editEntry(entry)">Edit</button>
+          <button (click)="deleteEntry(entry)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>Add New Entry</h3>
+  <div>
+    <label>Name:</label>
+    <input [(ngModel)]="newEntry.name" placeholder="City name" />
+    <label>Location:</label>
+    <input [(ngModel)]="newEntry.location" placeholder="Location" />
+    <label>Temperature:</label>
+    <input [(ngModel)]="newEntry.temperature" placeholder="Temperature" />
+    <button (click)="addNewEntry()">Add</button>
+  </div>
+
+  <div class="help-icon">
+    <button (click)="showHelp()">Help</button>
+  </div>
+
+  <div *ngIf="showHelpContent" class="help-content">
+    <p>This is the help content for Page 1.</p>
+  </div>
+</div>
